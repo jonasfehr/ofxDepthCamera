@@ -8,6 +8,9 @@
 
 #include "ofxDepthCameraOrbbecAstra.h"
 
+
+#ifdef OFX_DEPTH_CAMERA_ORBBECASTRA
+
 ofxDepthCameraOrbbecAstra::ofxDepthCameraOrbbecAstra() {
 	fr = 30;
 	depthWidth = 640;
@@ -58,3 +61,5 @@ int ofxDepthCameraOrbbecAstra::maxDepth() {
     // https://orbbec3d.com/product-astra-pro/
 	return 8000;
 }
+
+#endif

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxDepthCameraKinectV2.h"
+#include "ofxDepthCameraMultiKinectV2.h"
 #include "ofxDepthCameraProvider.h"
 
 #define OFX_DEPTH_CAMERA_KINECTV2
@@ -26,7 +26,7 @@ class ofApp : public ofBaseApp {
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-		ofxDepthCameraKinectV2 device;
+		ofxDepthCameraMultiKinectV2 device;
 		ofxDepthCameraProvider cam;
 
 };

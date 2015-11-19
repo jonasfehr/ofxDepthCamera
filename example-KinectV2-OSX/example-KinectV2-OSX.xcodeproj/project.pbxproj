@@ -28,6 +28,8 @@
 		B71DDE8F1BFD170F00729B2C /* ofxDepthCameraKinect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71DDE871BFD170F00729B2C /* ofxDepthCameraKinect.cpp */; };
 		B71DDE911BFD170F00729B2C /* ofxDepthCameraKinectV2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71DDE8B1BFD170F00729B2C /* ofxDepthCameraKinectV2.cpp */; };
 		B71DDE921BFD170F00729B2C /* ofxDepthCameraOrbbecAstra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71DDE8D1BFD170F00729B2C /* ofxDepthCameraOrbbecAstra.cpp */; };
+		B71DDEE21BFE488800729B2C /* ofxDepthCameraMultiKinectV2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71DDEE01BFE488800729B2C /* ofxDepthCameraMultiKinectV2.cpp */; };
+		B71DDEE71BFE49D800729B2C /* ofxFastFboReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B71DDEE51BFE49D800729B2C /* ofxFastFboReader.cpp */; };
 		B7E0E0211BFA4361001978DC /* ofxImageSequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7E0DF241BFA4361001978DC /* ofxImageSequence.cpp */; };
 		B7E0E02D1BFA4361001978DC /* ofxImageSequencePlayback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7E0E00B1BFA4361001978DC /* ofxImageSequencePlayback.cpp */; };
 		B7E0E0541BFA8493001978DC /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E0E0531BFA8493001978DC /* OpenCL.framework */; };
@@ -145,6 +147,10 @@
 		B71DDE8C1BFD170F00729B2C /* ofxDepthCameraKinectV2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxDepthCameraKinectV2.h; path = ../../../addons/ofxDepthCamera/src/adapters/ofxDepthCameraKinectV2.h; sourceTree = "<group>"; };
 		B71DDE8D1BFD170F00729B2C /* ofxDepthCameraOrbbecAstra.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxDepthCameraOrbbecAstra.cpp; path = ../../../addons/ofxDepthCamera/src/adapters/ofxDepthCameraOrbbecAstra.cpp; sourceTree = "<group>"; };
 		B71DDE8E1BFD170F00729B2C /* ofxDepthCameraOrbbecAstra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxDepthCameraOrbbecAstra.h; path = ../../../addons/ofxDepthCamera/src/adapters/ofxDepthCameraOrbbecAstra.h; sourceTree = "<group>"; };
+		B71DDEE01BFE488800729B2C /* ofxDepthCameraMultiKinectV2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxDepthCameraMultiKinectV2.cpp; path = ../src/adapters/ofxDepthCameraMultiKinectV2.cpp; sourceTree = "<group>"; };
+		B71DDEE11BFE488800729B2C /* ofxDepthCameraMultiKinectV2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxDepthCameraMultiKinectV2.h; path = ../src/adapters/ofxDepthCameraMultiKinectV2.h; sourceTree = "<group>"; };
+		B71DDEE51BFE49D800729B2C /* ofxFastFboReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFastFboReader.cpp; sourceTree = "<group>"; };
+		B71DDEE61BFE49D800729B2C /* ofxFastFboReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFastFboReader.h; sourceTree = "<group>"; };
 		B7E0DF241BFA4361001978DC /* ofxImageSequence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxImageSequence.cpp; sourceTree = "<group>"; };
 		B7E0DF251BFA4361001978DC /* ofxImageSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxImageSequence.h; sourceTree = "<group>"; };
 		B7E0E00B1BFA4361001978DC /* ofxImageSequencePlayback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxImageSequencePlayback.cpp; sourceTree = "<group>"; };
@@ -302,6 +308,8 @@
 				B71DDE8C1BFD170F00729B2C /* ofxDepthCameraKinectV2.h */,
 				B71DDE8D1BFD170F00729B2C /* ofxDepthCameraOrbbecAstra.cpp */,
 				B71DDE8E1BFD170F00729B2C /* ofxDepthCameraOrbbecAstra.h */,
+				B71DDEE01BFE488800729B2C /* ofxDepthCameraMultiKinectV2.cpp */,
+				B71DDEE11BFE488800729B2C /* ofxDepthCameraMultiKinectV2.h */,
 			);
 			name = adapters;
 			sourceTree = "<group>";
@@ -368,6 +376,24 @@
 				A7E727F16B52CE8AE7E497A6 /* usb_control.h */,
 			);
 			name = protocol;
+			sourceTree = "<group>";
+		};
+		B71DDEE31BFE49D800729B2C /* ofxFastFboReader */ = {
+			isa = PBXGroup;
+			children = (
+				B71DDEE41BFE49D800729B2C /* src */,
+			);
+			name = ofxFastFboReader;
+			sourceTree = "<group>";
+		};
+		B71DDEE41BFE49D800729B2C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B71DDEE51BFE49D800729B2C /* ofxFastFboReader.cpp */,
+				B71DDEE61BFE49D800729B2C /* ofxFastFboReader.h */,
+			);
+			name = src;
+			path = ../../ofxFastFboReader/src;
 			sourceTree = "<group>";
 		};
 		B7E0DEEA1BFA4360001978DC /* addons */ = {
@@ -508,6 +534,7 @@
 				D335FA899A1CDE4564B9FE45 /* ofxDepthCamera */,
 				95DA0149F6FE8A2707A30A41 /* ofxMultiKinectV2 */,
 				B7E0E0651BFA85C1001978DC /* ofxTurboJpeg */,
+				B71DDEE31BFE49D800729B2C /* ofxFastFboReader */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -717,6 +744,7 @@
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				3C3529677EB4B0AAEEDF2D0A /* ofxBaseDepthCamera.cpp in Sources */,
 				E878BD3FB6A9D57638059280 /* ofxDepthCameraProvider.cpp in Sources */,
+				B71DDEE21BFE488800729B2C /* ofxDepthCameraMultiKinectV2.cpp in Sources */,
 				B7E0E0211BFA4361001978DC /* ofxImageSequence.cpp in Sources */,
 				CBFA105A79C6462E71304E02 /* ofxDepthCameraReceiver.cpp in Sources */,
 				1C5F682C24F6BA67EE31098E /* ofxDepthCameraUtils.cpp in Sources */,
@@ -729,6 +757,7 @@
 				879FF62052195AD1A4F2D72E /* GpuRegistration.cpp in Sources */,
 				8D0B283FA19BACFC2D3533EE /* ofProtonect2.cpp in Sources */,
 				359D74FB5990FB665F2460D7 /* command_transaction.cpp in Sources */,
+				B71DDEE71BFE49D800729B2C /* ofxFastFboReader.cpp in Sources */,
 				995FA44819CBE344F3A99015 /* depth_packet_processor.cpp in Sources */,
 				90CFBDC258050F2A76C52BAD /* depth_packet_stream_parser.cpp in Sources */,
 				1A47AFF830CB14C0AECAEED1 /* double_buffer.cpp in Sources */,

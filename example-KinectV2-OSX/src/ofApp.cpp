@@ -31,6 +31,9 @@ void ofApp::draw(){
     cam.getColorImage().draw(0, cam.getDepthImage().getHeight(), 1920/3, 1080/3);
     device.getRegImage().draw(512, 424);
     
+    ofSetWindowTitle(ofToString(ofGetFrameRate()));
+
+    
 }
 
 //--------------------------------------------------------------

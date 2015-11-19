@@ -20,6 +20,7 @@
 
 #include "ofxMultiKinectV2.h"
 #include "GpuRegistration.h"
+#include "ofxFastFboReader.h"
 
 
 class ofxDepthCameraMultiKinectV2: public ofxBaseDepthCamera {
@@ -58,6 +59,7 @@ protected:
     ofImage regImage;
     ofImage irImage;
     
+    ofxFastFboReader reader;
     
 };
 

@@ -44,7 +44,7 @@ STRINGIFY(
           );
 
 
-ofxDepthCameraMultiKinectV2::ofxDepthCameraKinectV2() {
+ofxDepthCameraMultiKinectV2::ofxDepthCameraMultiKinectV2() {
     fr = 30;
     depthWidth = 512;
     depthHeight = 424;
@@ -126,8 +126,9 @@ void ofxDepthCameraMultiKinectV2::update() {
                 irShader.end();
                 irFbo.end();
                 
-                ofShortPixels irPixels;
-                irFbo.readToPixels(irPixels);
+                ofPixels irPixels;
+                //irFbo.readToPixels(irPixels);
+                reader.readToPixels(irFbo, irPixels);
                 irImage.setFromPixels(irPixels);
             }
         }
@@ -143,8 +144,10 @@ void ofxDepthCameraMultiKinectV2::update() {
                 gr.getRegisteredTexture(process_occlusion).draw(0, 0, depthWidth, depthHeight);
                 regFbo.end();
                 
-                ofShortPixels regPixels;
-                regFbo.readToPixels(regPixels);
+                ofPixels regPixels; // ofShortPixels
+                //regFbo.readToPixels(regPixels);
+                reader.readToPixels(regFbo, regPixels);
+
                 regImage.setFromPixels(regPixels);
             }
         }
@@ -161,7 +164,7 @@ ofVec3f ofxDepthCameraMultiKinectV2::getWorldCoordinateAt(int x, int y) {
 }
 
 int ofxDepthCameraMultiKinectV2::maxDepth() {
-    return 10000; //taken from looking into how ofxKinect calculates it's look up tables.
+    return 10000;
 }
 
 ofImage& ofxDepthCameraMultiKinectV2::getIrImage() {
